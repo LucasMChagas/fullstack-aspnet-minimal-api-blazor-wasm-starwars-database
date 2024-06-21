@@ -1,0 +1,15 @@
+﻿global using Microsoft.EntityFrameworkCore;
+global using StarWarsDatabase.Api.Endpoints;
+global using StarWarsDatabase.Api.Handlers;
+global using StarWarsDatabase.Core.Handlers;
+global using StarWarsDatabase.Core.Repositories;
+global using StarWarsDatabase.Infra.Data;
+global using StarWarsDatabase.Infra.Repositories;
+global using StarWarsDatabase.Core.DTOs.Characters;
+global using StarWarsDatabase.Core.Requests.Characters;
+global using StarWarsDatabase.Core.Responses;
+global using StarWarsDatabase.Core.Models;
+global using Microsoft.AspNetCore.Mvc;
+global using StarWarsDatabase.Api.Common.Api;
+global using StarWarsDatabase.Core;
+global using StarWarsDatabase.Api.Endpoints.Characters;

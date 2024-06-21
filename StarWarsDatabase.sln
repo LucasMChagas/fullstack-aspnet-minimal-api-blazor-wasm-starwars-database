@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWarsDatabase.Core", "StarWarsDatabase.Core\StarWarsDatabase.Core.csproj", "{B57C58FE-D6D9-423E-80BD-69EE74852E63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWarsDatabase.Infra", "StarWarsDatabase.Infra\StarWarsDatabase.Infra.csproj", "{B4DFB7F3-1AB0-49F2-A372-307B9444CBFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWarsDatabase.Api", "StarWarsDatabase.Api\StarWarsDatabase.Api.csproj", "{0C89BD68-C0A7-442D-91AC-3C50DBC89E75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B57C58FE-D6D9-423E-80BD-69EE74852E63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B57C58FE-D6D9-423E-80BD-69EE74852E63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B57C58FE-D6D9-423E-80BD-69EE74852E63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B57C58FE-D6D9-423E-80BD-69EE74852E63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4DFB7F3-1AB0-49F2-A372-307B9444CBFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4DFB7F3-1AB0-49F2-A372-307B9444CBFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4DFB7F3-1AB0-49F2-A372-307B9444CBFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4DFB7F3-1AB0-49F2-A372-307B9444CBFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C89BD68-C0A7-442D-91AC-3C50DBC89E75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C89BD68-C0A7-442D-91AC-3C50DBC89E75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C89BD68-C0A7-442D-91AC-3C50DBC89E75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C89BD68-C0A7-442D-91AC-3C50DBC89E75}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
