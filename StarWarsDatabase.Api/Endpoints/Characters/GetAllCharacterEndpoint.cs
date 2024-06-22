@@ -2,6 +2,7 @@
 {
     public class GetAllCharacterEndpoint : IEndpoint
     {
+        
         public static void Map(IEndpointRouteBuilder app) 
             => app.MapGet("/", HandleAsync)
             .WithName("Character: Get All")
@@ -10,7 +11,8 @@
             .WithOrder(2)
             .Produces<PagedResponse<List<GetCharacterDTO>?>>();
 
-
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         private static async Task<IResult> HandleAsync(        
         ICharacterHandler handler,
         [FromQuery] int pageNumber = Configuration.DefaultPageNumber,
@@ -25,7 +27,7 @@
             var result = await handler.GetAllAsync(request);
             return result.IsSuccess
                 ? TypedResults.Ok(result)
-                : TypedResults.BadRequest(result);
+                : TypedResults.NotFound(result);            
         }
     }
 }

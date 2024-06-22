@@ -1,3 +1,6 @@
+using Microsoft.Extensions.FileProviders;
+using StarWarsDatabase.Api.Common.Swagger;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -7,7 +10,8 @@ builder.Services.AddTransient<ICharacterHandler, CharacterHandler>();
 builder.Services.AddTransient<ICharacterRepository, CharacterRepository>();
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(x => { x.CustomSchemaIds(n => n.FullName); });
+builder.Services.AddSwaggerGen();
+
 
 //builder.Services.Configure<JsonOptions>(options =>
 //{
@@ -15,6 +19,8 @@ builder.Services.AddSwaggerGen(x => { x.CustomSchemaIds(n => n.FullName); });
 //});
 
 var app = builder.Build();
+
+app.UseStaticFiles();
 
 app.UseSwagger();
 app.UseSwaggerUI();

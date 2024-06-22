@@ -2,5 +2,5 @@
 
 public class GetCharacterByIdRequest : Request
 {
-    public int Id { get; set; }
+    
 }
