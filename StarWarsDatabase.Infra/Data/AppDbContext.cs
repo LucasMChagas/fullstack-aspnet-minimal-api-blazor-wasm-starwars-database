@@ -62,7 +62,7 @@ public partial class AppDbContext : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Character_Planet");
 
-            entity.HasMany(d => d.Starships).WithMany(p => p.IdCharacters)
+            entity.HasMany(d => d.Starships).WithMany(p => p.Characters)
                 .UsingEntity<Dictionary<string, object>>(
                     "CharacterStarship",
                     r => r.HasOne<Starship>().WithMany()
@@ -79,7 +79,7 @@ public partial class AppDbContext : DbContext
                         j.ToTable("CharacterStarships");
                     });
 
-            entity.HasMany(d => d.Vehicles).WithMany(p => p.IdCharacters)
+            entity.HasMany(d => d.Vehicles).WithMany(p => p.Characters)
                 .UsingEntity<Dictionary<string, object>>(
                     "CharacterVehicle",
                     r => r.HasOne<Vehicle>().WithMany()
@@ -114,7 +114,7 @@ public partial class AppDbContext : DbContext
                 .IsUnicode(false);
             entity.Property(e => e.UpdatedAt).HasColumnType("datetime");
 
-            entity.HasMany(d => d.IdCharacters).WithMany(p => p.Films)
+            entity.HasMany(d => d.Characters).WithMany(p => p.Films)
                 .UsingEntity<Dictionary<string, object>>(
                     "FilmCharacter",
                     r => r.HasOne<Character>().WithMany()
@@ -131,7 +131,7 @@ public partial class AppDbContext : DbContext
                         j.ToTable("FilmCharacters");
                     });
 
-            entity.HasMany(d => d.IdPlanets).WithMany(p => p.IdFilms)
+            entity.HasMany(d => d.Planets).WithMany(p => p.Films)
                 .UsingEntity<Dictionary<string, object>>(
                     "FilmPlanet",
                     r => r.HasOne<Planet>().WithMany()
@@ -148,7 +148,7 @@ public partial class AppDbContext : DbContext
                         j.ToTable("FilmPlanets");
                     });
 
-            entity.HasMany(d => d.IdVehicles).WithMany(p => p.IdFilms)
+            entity.HasMany(d => d.Vehicles).WithMany(p => p.Films)
                 .UsingEntity<Dictionary<string, object>>(
                     "FilmVehicle",
                     r => r.HasOne<Vehicle>().WithMany()
@@ -269,7 +269,7 @@ public partial class AppDbContext : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Specie_Planet");
 
-            entity.HasMany(d => d.IdCharacters).WithMany(p => p.Species)
+            entity.HasMany(d => d.Characters).WithMany(p => p.Species)
                 .UsingEntity<Dictionary<string, object>>(
                     "SpecieCharacter",
                     r => r.HasOne<Character>().WithMany()

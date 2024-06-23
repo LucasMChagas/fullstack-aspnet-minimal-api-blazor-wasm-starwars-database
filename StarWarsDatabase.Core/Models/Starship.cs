@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace StarWarsDatabase.Core.Models;
+﻿namespace StarWarsDatabase.Core.Models;
 
 public partial class Starship
 {
@@ -39,5 +36,5 @@ public partial class Starship
 
     public virtual ICollection<Film> Films { get; set; } = new List<Film>();
 
-    public virtual ICollection<Character> IdCharacters { get; set; } = new List<Character>();
+    public virtual ICollection<Character> Characters { get; set; } = new List<Character>();
 }

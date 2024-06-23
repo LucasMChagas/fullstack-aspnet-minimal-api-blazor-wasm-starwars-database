@@ -33,5 +33,5 @@ public partial class Planet
 
     public virtual ICollection<Species> Species { get; set; } = new List<Species>();
 
-    public virtual ICollection<Film> IdFilms { get; set; } = new List<Film>();
+    public virtual ICollection<Film> Films { get; set; } = new List<Film>();
 }

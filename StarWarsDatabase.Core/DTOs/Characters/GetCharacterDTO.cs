@@ -82,10 +82,10 @@ namespace StarWarsDatabase.Core.DTOs.Characters
 
         public ICollection<Object> Films { get; set; } = [];
 
-        public ICollection<Object> Species { get; set; } = new List<Object>();
+        public ICollection<Object> Species { get; set; } = [];
 
-        public ICollection<Object> Starships { get; set; } = new List<Object>();
+        public ICollection<Object> Starships { get; set; } = [];
 
-        public ICollection<Object> Vehicles { get; set; } = new List<Object>();
+        public ICollection<Object> Vehicles { get; set; } = [];
     }
 }

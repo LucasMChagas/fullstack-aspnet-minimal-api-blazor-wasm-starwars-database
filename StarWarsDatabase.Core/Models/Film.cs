@@ -23,11 +23,11 @@ public partial class Film
     public DateTime? CreatedAt { get; set; }
 
     public DateTime? UpdatedAt { get; set; }    
-    public virtual ICollection<Character> IdCharacters { get; set; } = new List<Character>();
+    public virtual ICollection<Character> Characters { get; set; } = new List<Character>();
 
-    public virtual ICollection<Planet> IdPlanets { get; set; } = new List<Planet>();
+    public virtual ICollection<Planet> Planets { get; set; } = new List<Planet>();
 
-    public virtual ICollection<Vehicle> IdVehicles { get; set; } = new List<Vehicle>();
+    public virtual ICollection<Vehicle> Vehicles { get; set; } = new List<Vehicle>();
 
     public virtual ICollection<Species> Species { get; set; } = new List<Species>();
 

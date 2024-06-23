@@ -6,4 +6,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="DTOs\Vehicles\" />
+    <Folder Include="DTOs\Starships\" />
+    <Folder Include="DTOs\Species\" />
+    <Folder Include="DTOs\Planets\" />
+  </ItemGroup>
+
 </Project>
