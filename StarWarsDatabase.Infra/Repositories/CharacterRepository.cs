@@ -43,7 +43,6 @@ public class CharacterRepository(AppDbContext context) : ICharacterRepository
     }
 
     public async Task<int> TotalCount()
-    {
-        return await context.Characters.AsNoTracking().CountAsync();
-    }
+    => await context.Characters.AsNoTracking().CountAsync();
+    
 }
