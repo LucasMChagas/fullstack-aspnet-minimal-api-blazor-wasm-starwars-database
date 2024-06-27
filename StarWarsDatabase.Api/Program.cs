@@ -18,7 +18,7 @@ builder.Services.AddSwaggerGen();
 //    options.SerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
 //});
 
-var app = builder.Build();
+var app = builder.Build(); 
 
 app.UseStaticFiles();
 

@@ -4,7 +4,7 @@ using StarWarsDatabase.Core.Models;
 using StarWarsDatabase.Core.Repositories;
 using StarWarsDatabase.Infra.Data;
 
-namespace StarWarsDatabase.Infra;
+namespace StarWarsDatabase.Infra.Repositories;
 
 public class FilmRepository(AppDbContext context) : IFilmRepository
 {
@@ -37,12 +37,12 @@ public class FilmRepository(AppDbContext context) : IFilmRepository
            .Include(x => x.Starships)
            .Include(x => x.Vehicles)
            .Include(x => x.Species)
-           .FirstOrDefaultAsync(film  => film.Id == id);           
+           .FirstOrDefaultAsync(film => film.Id == id);
 
         return film;
     }
 
-    public async Task<int> TotalCount() 
+    public async Task<int> TotalCount()
     => await context.Characters.AsNoTracking().CountAsync();
-    
+
 }

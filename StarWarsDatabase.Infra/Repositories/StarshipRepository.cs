@@ -4,7 +4,7 @@ using StarWarsDatabase.Core.Models;
 using StarWarsDatabase.Core.Repositories;
 using StarWarsDatabase.Infra.Data;
 
-namespace StarWarsDatabase.Infra;
+namespace StarWarsDatabase.Infra.Repositories;
 
 public class StarshipRepository(AppDbContext context) : IStarshipRepository
 {

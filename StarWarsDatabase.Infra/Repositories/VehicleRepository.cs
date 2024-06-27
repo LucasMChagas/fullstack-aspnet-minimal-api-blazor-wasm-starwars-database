@@ -4,7 +4,7 @@ using StarWarsDatabase.Core.Models;
 using StarWarsDatabase.Core.Repositories;
 using StarWarsDatabase.Infra.Data;
 
-namespace StarWarsDatabase.Infra;
+namespace StarWarsDatabase.Infra.Repositories;
 
 public class VehicleRepository(AppDbContext context) : IVehicleRepository
 {
@@ -19,7 +19,7 @@ public class VehicleRepository(AppDbContext context) : IVehicleRepository
             .Include(x => x.Films)
             .Skip((pageNumber - 1) * pageSize)
             .Take(pageSize)
-            .ToListAsync();            
+            .ToListAsync();
 
         return vehicles;
     }
@@ -36,6 +36,6 @@ public class VehicleRepository(AppDbContext context) : IVehicleRepository
         return vehicle;
     }
 
-    public async Task<int> TotalCount() 
-    => await context.Vehicles.AsNoTracking().CountAsync();    
+    public async Task<int> TotalCount()
+    => await context.Vehicles.AsNoTracking().CountAsync();
 }
