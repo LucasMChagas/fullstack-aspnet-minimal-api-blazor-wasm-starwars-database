@@ -1,5 +1,5 @@
-﻿namespace StarWarsDatabase.Api.Endpoints.Characters
-{
+﻿namespace StarWarsDatabase.Api.Endpoints.Characters;
+
     public class GetAllCharacterEndpoint : IEndpoint
     {
         
@@ -30,4 +30,4 @@
                 : TypedResults.NotFound(result);            
         }
     }
-}
+
